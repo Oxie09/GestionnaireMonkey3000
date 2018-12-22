@@ -1,0 +1,86 @@
+doctype html
+head
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(charset='UTF-8')
+  title Monkey Manager 3000
+  // Mon CSS
+  link(rel='stylesheet', type='text/css', href='/static/css/style.css')
+  // Google fonts
+  link(href='https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe', rel='stylesheet')
+  //Icon
+  link(rel='icon', type='images/png', href='/static/images/logo.jpg')
+
+body
+  #entete.container-fluid
+    a.nav-link.center(href='/')
+      img(src='./static/images/logo.jpg', width='10%', height='10%', alt='')
+    h1.ZCOOL.sizebienvenue.margesinge Nos Singes
+
+  #lien.container-fluid
+    .ZCOOL.sizelien
+      | Pour ajouter un singe à la liste, remplissez le formulaire ci-dessous !
+    br
+	
+  #formulaire.container-fluid
+    br
+    img(src='./static/images/fondmonkey.png', width='10%', height='10%', alt='').marge
+    form(method='POST' action='/singe')
+        div.form-group.ZCOOL
+            label(for='name') Nom : 
+            input#name.form-control(type='text', placeholder='Nom du singe' name='name')
+            br
+            br
+        div.form-group.ZCOOL
+            label(for='age') Age : 
+            input#age.form-control(type='text', placeholder='Age du singe' name='age')
+            br
+            br
+        div.form-group.ZCOOL
+            label(for='poids') Poids : 
+            input#poids.form-control(type='text', placeholder='Poids du singe en kg' name='poids')
+            br
+            br
+        div.form-group.ZCOOL
+            label(for='sexe') Mâle ou Femelle : 
+            input#sexe.form-control(type='text', placeholder='Mâle ou Femelle' name='sexe')
+            br
+            br
+        div.form-group.ZCOOL
+            label(for='descrition') Caractéristiques du singe : 
+            input#descrition.form-control(type='text', placeholder='Description du singe' name='descrition')
+            br
+            br
+        button.btn.btn-primary(type='submit').bouton8.margebouton Créer le singe !
+        br
+        br
+        br
+
+
+  #singe.container-fluid
+    .ZCOOL.sizetitrelist
+      | Les singes de la réserve du Parc Henri Vinay :
+
+    -var name =""
+    ul
+      for singe in singes
+        -name = singe.name
+        a.nav-link.center(href='/pagesinge/' + singe.id)
+            h1.ZCOOL.li #{name}
+    br
+
+  #delete.container-fluid
+    br
+    img(src='./static/images/singedead.png', width='12%', height='12%', alt='').marge
+    form(method='POST' action='/singe/name')
+        div.form-group.ZCOOL
+            label(for='name') Nom du singe à supprimer : 
+            input#name.form-control(type='text', placeholder='Nom du singe' name='name')
+        br
+        br
+        button.btn.btn-primary(type='submit').bouton8.margebouton Supprimer le singe !
+    br
+    br
+    br
+
+footer
+    include footer.pug

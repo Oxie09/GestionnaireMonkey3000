@@ -1,0 +1,58 @@
+doctype html
+head
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(charset='UTF-8')
+  title Monkey Manager 3000
+  // Mon CSS
+  link(rel='stylesheet', type='text/css', href='/static/css/style.css')
+  // Google fonts
+  link(href='https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe', rel='stylesheet')
+  //Icon
+  link(rel='icon', type='images/png', href='/static/images/logo.jpg')
+
+body
+  #formulaire.container-fluid
+    br
+    .ZCOOL.sizetitrelist
+      | Modifier ce singe :
+    - var url='/singe/update/' + id
+    img(src='./static/images/fondmonkey.png', width='10%', height='10%', alt='').marge
+    form(method='POST' action=url)
+        div.form-group.ZCOOL
+            label(for='name') Nom : 
+            input#name.form-control(type='text', placeholder='Nom du singe' name='name')
+            br
+            br
+        div.form-group.ZCOOL
+            label(for='age') Age : 
+            input#age.form-control(type='text', placeholder='Age du singe' name='age')
+            br
+            br
+        div.form-group.ZCOOL
+            label(for='poids') Poids : 
+            input#poids.form-control(type='text', placeholder='Poids du singe en kg' name='poids')
+            br
+            br
+        div.form-group.ZCOOL
+            label(for='sexe') Mâle ou Femelle : 
+            input#sexe.form-control(type='text', placeholder='Mâle ou Femelle' name='sexe')
+            br
+            br
+        div.form-group.ZCOOL
+            label(for='descrition') Caractéristiques du singe : 
+            input#descrition.form-control(type='text', placeholder='Description du singe' name='descrition')
+            br
+            br
+        button.btn.btn-success(type='submit').bouton8.margebouton Modifie !
+        br
+        br
+        br
+
+    #separation.container-fluid
+        .ZCOOL.marge
+          | . . .
+        br
+		  
+	
+footer
+    include footer.pug

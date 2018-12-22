@@ -1,0 +1,41 @@
+doctype html
+head
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(charset='UTF-8')
+  title Monkey Manager 3000
+  // Mon CSS
+  link(rel='stylesheet', type='text/css', href='static/css/style.css')
+  // Google fonts
+  link(href='https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe', rel='stylesheet')
+  //Icon
+  link(rel='icon', type='images/png', href='static/images/logo.jpg')
+ 
+body
+  #presentation.container-fluid
+    img(src='./static/images/logo.jpg', width='10%', height='10%', alt='')
+    br
+    h1.ZCOOL.sizebienvenue Monkey Manager 3000
+    br
+    .sizepresentation.ZCOOL  Site de gestion des singes et enclos du jardin Henri Vinay
+    br
+  
+  #lien.container-fluid
+    .ZCOOL.sizelien
+      | Pour accéder aux singes et aux enclos, cliquez sur les boutons ci-dessous
+    br
+    img.marge(src='./static/images/fleche.png', width='8%', height='8%', alt='')
+    br
+  
+  #acces.container-fluid
+    a(href='/singe')
+      h1.ZCOOL.motacces Nos Singes
+    a(href='/enclos')
+      h1.ZCOOL.motacces2 Nos Enclos
+    
+  #separation.container-fluid
+    .ZCOOL.marge
+      | . . .
+    br
+
+footer
+    include footer.pug

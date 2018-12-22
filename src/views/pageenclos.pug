@@ -1,0 +1,48 @@
+doctype html
+head
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(charset='UTF-8')
+  title Monkey Manager 3000
+  // Mon CSS
+  link(rel='stylesheet', type='text/css', href='/static/css/style.css')
+  // Google fonts
+  link(href='https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe', rel='stylesheet')
+  //Icon
+  link(rel='icon', type='images/png', href='/static/images/logo.jpg')
+
+body
+    #ajoute.container-fluid
+        a.nav-link.center(href='/enclos')
+            img(src='../static/images/logo.jpg', width='10%', height='10%', alt='')
+        h1.ZCOOL.sizeinfo Les informations sur cet enclos :
+        br
+        div.form-info.ZCOOL
+            h1.ZCOOL Nom : #{desenclos.nom}
+        br
+        div.form-info.ZCOOL
+            h1.ZCOOL Taille : #{desenclos.taille}
+        br
+        div.form-description.ZCOOL
+            h1.ZCOOL Nombre de singes dans l'enclos : #{desenclos.nb_singes}
+        br
+        div.form-description.ZCOOL
+            h1.ZCOOL Capacité maximale de singes dans l'enclos : #{desenclos.capacite_max}
+        br
+        div.form-description.ZCOOL
+            h1.ZCOOL Description de l'enclos : #{desenclos.description}
+        br
+        br
+		
+        a.nav-link.center(href='/modifierenclos/' + desenclos.id)
+            button.btn.btn-primary(type='submit').bouton9.margebouton Modifier cet enclos !
+        br
+        br
+
+    #separation.container-fluid
+        .ZCOOL.marge
+          | . . .
+        br
+		  
+	
+footer
+    include footer.pug

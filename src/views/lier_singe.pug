@@ -1,0 +1,25 @@
+doctype html
+head
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(charset='UTF-8')
+  title Monkey Manager 3000
+  // Mon CSS
+  link(rel='stylesheet', type='text/css', href='/static/css/style.css')
+  // Google fonts
+  link(href='https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe', rel='stylesheet')
+  //Icon
+  link(rel='icon', type='images/png', href='/static/images/logo.jpg')
+
+body
+  #singe.container-fluid
+    .ZCOOL.sizetitrelist
+      | Les enclos disponibles :
+
+    ul
+      for enclo in enclos
+            - var url5 = '/pageenclos/' + enclo.id
+                a(href=url5) 
+                    h1.ZCOOL.li #{enclo.nom}
+            - var url2 = '/lier_singe_enclos/' + id_singe + '/' + enclo.id
+                a.btn.btn-primary(href=url2, role='button') Lier a cet enclos
+    br

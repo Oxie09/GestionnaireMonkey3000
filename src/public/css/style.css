@@ -1,0 +1,210 @@
+a
+{
+color: white;
+text-decoration: none;
+}
+
+a:hover {
+color: #F79326;
+}
+
+/* taille des fonts*/
+.sizebienvenue{
+	font-size:60pt;
+	margin-left: 22%;
+	text-shadow: 2px 2px 4px black;
+}
+
+.sizepresentation{
+	font-size:30pt;
+	margin-left: 15%;
+	text-shadow: 2px 2px 4px black;
+}
+
+.sizelien{
+	font-size:25pt;
+	margin-left: 12%;
+}
+
+.sizesinges{
+	font-size:60pt;
+	margin-left: 38%;
+}
+
+.sizetitrelist{
+	font-size:30pt;
+	text-shadow: 2px 2px 4px black;
+}
+.sizefooter{
+	font-size:18pt;
+	text-shadow: 2px 2px 4px black;
+	margin-left:20%;
+	padding-top: 5%;
+}
+.sizeinfo{
+	font-size:40pt;
+	margin-left: 25%;
+}
+
+.motacces{
+	font-size:50pt;
+	margin-left: 15%;
+	padding-top: 5%;
+}
+
+.motacces2{
+	font-size:50pt;
+	margin-left: 65%;
+	padding-top: 8%;
+	
+}
+
+/* Bouton */
+.bouton8 {
+	border-radius:12px 0 12px 0;
+	background: #FFD10D;
+	border:none;
+	color:white;
+	width: 25%;
+	font-family: 'ZCOOL KuaiLe', cursive;
+	font-size: 30pt;
+	padding:10px 0 10px 0;
+	box-shadow:1px 1px 3px #999;
+	
+}
+.bouton9 {
+	border-radius:12px 0 12px 0;
+	background: #BED95F;
+	border:none;
+	color:white;
+	width: 25%;
+	font-family: 'ZCOOL KuaiLe', cursive;
+	font-size: 30pt;
+	padding:10px 0 10px 0;
+	box-shadow:1px 1px 3px #999;
+	
+}
+.bouton18 {
+	width:100px;
+	height:100px;
+	background:#44C55D;
+	border-radius:50%;
+	border:none;
+	color:#fff;
+	font-family: 'ZCOOL KuaiLe', cursive;
+	text-shadow: 2px 2px 4px black;
+	font-size:30pt;
+}
+
+/* Déclaration des Fonts */
+.ZCOOL {
+	font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+
+/*les blocs*/
+#presentation{
+	background-image:url(../images/background2.jpg);
+	width : 100%;
+	height : 100%;
+	background-size:cover;
+	color : #FFD10D;
+}
+
+#lien{
+	background-color:#FFD10D;
+	background-size:cover;
+	color : white;
+}
+
+#acces{
+	background-image:url(../images/fond.png);
+	height:500px;
+	background-size:cover;
+	color : brown;
+}
+#entete{
+	background-image:url(../images/fondsinge2.jpg);
+	width : 100%;
+	height : 100%;
+	background-size:cover;
+	color : white;
+}
+#singe{
+	background-color:#FFD10D;
+	background-size:cover;
+	color : white;
+}
+#formulaire{
+	background-image:url(../images/feuillage.jpg);
+	background-size:cover;
+	color : #FFD10D;
+}
+#ajoute{
+	background-image:url(../images/banana.jpg);
+	background-size:cover;
+	color : #44C55D;
+	width : 100%;
+	height : 100%;
+	text-shadow: 2px 2px 4px black;
+}
+#valide{
+	background-color:#FFD10D;
+	background-size:cover;
+	min-height:100%;
+	color : white;
+}
+#delete{
+	background-color:#BED95F;
+	background-size:cover;
+	width : 100%;
+	height : 100%;
+	color : white;
+}
+#footer{
+	background-image:url(../images/footer.png);
+	background-size:cover;
+	color : white;
+	height :300px;
+	width:100%;
+	text-shadow: 2px 2px 4px black;
+}
+#separation{
+	background-color:#44C55D;
+	background-size:cover;
+	width : 100%;
+	height : 100%;
+	color : white;
+	font-size:20pt;
+}
+
+.marge{
+	margin-left:45%;	
+}
+
+.margesinge{
+	margin-left:35%;
+	padding-top:4%;
+}
+
+.form-group{
+	font-size:30pt;
+	margin-left: 30%;
+	text-shadow: 2px 2px 4px black;
+}
+.form-info{
+	font-size:15pt;
+	margin-left: 40%;
+}
+.form-description{
+	font-size:15pt;
+	margin-left: 25%;
+}
+
+.margebouton{
+	margin-left: 40%;
+}
+
+.margebouton18{
+	margin-left: 45%;
+}

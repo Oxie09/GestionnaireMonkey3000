@@ -1,0 +1,52 @@
+doctype html
+head
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(charset='UTF-8')
+  title Monkey Manager 3000
+  // Mon CSS
+  link(rel='stylesheet', type='text/css', href='/static/css/style.css')
+  // Google fonts
+  link(href='https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe', rel='stylesheet')
+  //Icon
+  link(rel='icon', type='images/png', href='/static/images/logo.jpg')
+
+body
+    #ajoute.container-fluid
+        a.nav-link.center(href='/singe')
+            img(src='../static/images/logo.jpg', width='10%', height='10%', alt='')
+        h1.ZCOOL.sizeinfo Les informations sur ce singe :
+        br
+        div.form-info.ZCOOL
+            h1.ZCOOL Nom : #{singes.name}
+        br
+        div.form-info.ZCOOL
+            h1.ZCOOL Age : #{singes.age}
+        br
+        div.form-info.ZCOOL
+            h1.ZCOOL Poids : #{singes.poids}
+        br
+        div.form-info.ZCOOL
+            h1.ZCOOL Sexe : #{singes.sexe}
+        br
+        div.form-description.ZCOOL
+            h1.ZCOOL Description : #{singes.descrition}
+        br
+        br
+		
+        a.nav-link.center(href='/modifiersinge/' + singes.id)
+            button.btn.btn-primary(type='submit').bouton9.margebouton Modifier ce singe !
+        br
+        br
+        a.nav-link.center(href='/lier_singe/' + singes.id)
+            button.btn.btn-primary(type='submit').bouton9.margebouton Lier ce singe !
+        br
+        br
+
+    #separation.container-fluid
+        .ZCOOL.marge
+          | . . .
+        br
+		  
+	
+footer
+    include footer.pug

@@ -1,0 +1,58 @@
+doctype html
+head
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(charset='UTF-8')
+  title Monkey Manager 3000
+  // Mon CSS
+  link(rel='stylesheet', type='text/css', href='/static/css/style.css')
+  // Google fonts
+  link(href='https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe', rel='stylesheet')
+  //Icon
+  link(rel='icon', type='images/png', href='/static/images/logo.jpg')
+
+body
+  #formulaire.container-fluid
+    br
+    .ZCOOL.sizetitrelist
+      | Modifier cet enclos :
+    - var url='/enclos/update/' + id
+    img(src='./static/images/fondmonkey.png', width='10%', height='10%', alt='').marge
+    form(method='POST' action=url)
+        div.form-group.ZCOOL
+            label(for='nom') Nom : 
+            input#nom.form-control(type='text', placeholder='Nom enclos' name='nom')
+            br
+            br
+        div.form-group.ZCOOL
+            label(for='taille') Surface enclos : 
+            input#taille.form-control(type='text', placeholder='Taille enclos en m2' name='taille')
+            br
+            br
+        div.form-group.ZCOOL
+            label(for='nb_singes') Nombre de singes dans l enclos : 
+            input#nb_singes.form-control(type='text', placeholder='Nombre de singes présents dans l enclos' name='nb_singes')
+            br
+            br
+        div.form-group.ZCOOL
+            label(for='capacite_max') Capacité maximale de singes : 
+            input#capacite_max.form-control(type='text', placeholder='Capacité maximale de singes dans l enclos' name='capacite_max')
+            br
+            br
+        div.form-group.ZCOOL
+            label(for='description') Caractéristiques de l enclos : 
+            input#description.form-control(type='text', placeholder='Description enclos' name='description')
+            br
+            br
+        button.btn.btn-success(type='submit').bouton8.margebouton Modifie !
+        br
+        br
+        br
+
+    #separation.container-fluid
+        .ZCOOL.marge
+          | . . .
+        br
+		  
+	
+footer
+    include footer.pug
